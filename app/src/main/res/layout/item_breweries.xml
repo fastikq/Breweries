@@ -1,0 +1,186 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/layout_margin_default"
+    android:background="@drawable/shape_green_border"
+    android:padding="@dimen/layout_padding_default">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        style="@style/BreweriesStyle.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Almanac Beer Company" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStreetLabel"
+        style="@style/BreweriesStyle.SubTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/street"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCityLabel"
+        style="@style/BreweriesStyle.SubTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStreetLabel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStateLabel"
+        style="@style/BreweriesStyle.SubTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/state"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCityLabel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountryLabel"
+        style="@style/BreweriesStyle.SubTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/country"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStateLabel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPhoneLabel"
+        style="@style/BreweriesStyle.SubTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCountryLabel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWebUrlLabel"
+        style="@style/BreweriesStyle.SubTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/website"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPhoneLabel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStreetValue"
+        style="@style/BreweriesStyle.SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_small"
+        app:layout_constraintBottom_toBottomOf="@id/tvStreetLabel"
+        app:layout_constraintStart_toEndOf="@id/tvStreetLabel"
+        app:layout_constraintTop_toTopOf="@id/tvStreetLabel"
+        tools:text="651B W Tower Ave" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCityValue"
+        style="@style/BreweriesStyle.SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_small"
+        app:layout_constraintBottom_toBottomOf="@id/tvCityLabel"
+        app:layout_constraintStart_toEndOf="@id/tvCityLabel"
+        app:layout_constraintTop_toTopOf="@id/tvCityLabel"
+        tools:text="Alameda" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStateValue"
+        style="@style/BreweriesStyle.SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_small"
+        app:layout_constraintBottom_toBottomOf="@id/tvStateLabel"
+        app:layout_constraintStart_toEndOf="@id/tvStateLabel"
+        app:layout_constraintTop_toTopOf="@id/tvStateLabel"
+        tools:text="California" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountryValue"
+        style="@style/BreweriesStyle.SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_small"
+        app:layout_constraintBottom_toBottomOf="@id/tvCountryLabel"
+        app:layout_constraintStart_toEndOf="@id/tvCountryLabel"
+        app:layout_constraintTop_toTopOf="@id/tvCountryLabel"
+        tools:text="United States" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPhoneValue"
+        style="@style/BreweriesStyle.SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_small"
+        app:layout_constraintBottom_toBottomOf="@id/tvPhoneLabel"
+        app:layout_constraintStart_toEndOf="@id/tvPhoneLabel"
+        app:layout_constraintTop_toTopOf="@id/tvPhoneLabel"
+        tools:text="4159326531" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWebUrlValue"
+        style="@style/BreweriesStyle.SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_small"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="@id/tvWebUrlLabel"
+        app:layout_constraintStart_toEndOf="@id/tvWebUrlLabel"
+        app:layout_constraintTop_toTopOf="@id/tvWebUrlLabel"
+        tools:text="http://almanacbeer.com" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnShowOnMap"
+        style="@style/BreweriesStyle.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="@dimen/layout_margin_small"
+        android:text="@string/show_on_map"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWebUrlLabel"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gStreet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvStreetLabel, tvStreetValue" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvCityLabel, tvCityValue" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvStateLabel, tvStateValue" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvCountryLabel, tvCountryValue" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvPhoneLabel, tvPhoneValue" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gWebUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvWebUrlLabel, tvWebUrlValue" />
+</androidx.constraintlayout.widget.ConstraintLayout>

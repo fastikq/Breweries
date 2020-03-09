@@ -1,0 +1,40 @@
+<resources>
+
+    <style name="BreweriesStyle" />
+
+    <style name="BreweriesStyle.ToolbarTextView">
+        <item name="android:textSize">@dimen/toolbar_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="BreweriesStyle.Title">
+        <item name="android:textSize">@dimen/large_text_size</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="BreweriesStyle.SubTitleLabel">
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textColor">@color/colorGray</item>
+    </style>
+
+    <style name="BreweriesStyle.SubTitle">
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textColor">@color/colorDarkGray</item>
+    </style>
+
+    <style name="BreweriesStyle.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/shape_rounded_green_btn</item>
+    </style>
+
+    <style name="BreweriesStyle.EditText">
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/shape_round_rectangle</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textCursorDrawable">@drawable/shape_cursor_edit_text</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+    </style>
+</resources>

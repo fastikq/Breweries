@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="border_radius_small">4dp</dimen>
+    <dimen name="border_radius_default">8dp</dimen>
+    <dimen name="layout_padding_default">8dp</dimen>
+    <dimen name="layout_padding_small">4dp</dimen>
+    <dimen name="layout_margin_default">8dp</dimen>
+    <dimen name="layout_margin_small">4dp</dimen>
+    <dimen name="layout_margin_large">16dp</dimen>
+    <dimen name="toolbar_text_size">22sp</dimen>
+    <dimen name="default_text_size">12sp</dimen>
+    <dimen name="large_text_size">20sp</dimen>
+</resources>

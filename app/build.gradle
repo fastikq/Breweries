@@ -1,0 +1,94 @@
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+apply plugin: "kotlin-android-extensions"
+
+android {
+    compileSdkVersion compile_sdk
+    defaultConfig {
+        applicationId application_id
+        minSdkVersion min_sdk
+        targetSdkVersion target_sdk
+        versionCode version_code
+        versionName version_name
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
+        vectorDrawables.useSupportLibrary = true
+        buildConfigField "String", "DB_NAME", "\"breweries_database\""
+        buildConfigField "int", "DB_VERSION", "1"
+    }
+
+    buildTypes {
+        debug {
+            versionNameSuffix "-debug"
+            signingConfig signingConfigs.debug
+            debuggable true
+            minifyEnabled false
+            proguardFiles "proguard-rules.pro"
+            buildConfigField "String", "API_URL", "\"​https://api.openbrewerydb.org\""
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "breweries-${variant.versionName}(${variant.versionCode}).apk"
+        }
+    }
+
+    compileOptions {
+        setSourceCompatibility(JavaVersion.VERSION_1_8)
+        setTargetCompatibility(JavaVersion.VERSION_1_8)
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //Android X
+    implementation "com.google.android.material:material:$google_material_version"
+    implementation "androidx.appcompat:appcompat:$app_compat_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_version"
+    implementation "androidx.core:core-ktx:$core_ktx_version"
+    implementation "androidx.recyclerview:recyclerview:$recycler_version"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    //Koin
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+
+    //Network
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$kotlinx_coroutines_adapter_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$http_interceptor_version"
+    implementation "com.squareup.okio:okio:$okio_version"
+
+    //Gson
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    //Timber
+    implementation "com.jakewharton.timber:timber:$timber_version"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+
+    //Other
+    implementation "com.facebook.stetho:stetho:$stetho_version"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinx_coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines_version"
+}
