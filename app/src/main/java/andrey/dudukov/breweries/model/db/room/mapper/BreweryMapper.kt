@@ -10,14 +10,14 @@ object BreweryMapper : BaseMapper<Brewery, DbBrewery> {
         return DbBrewery(
             id = source.id,
             name = source.name,
-            street = if (source.street.isEmpty()) null else source.street,
-            city = if (source.city.isEmpty()) null else source.city,
-            state = if (source.state.isEmpty()) null else source.state,
-            country = if (source.country.isEmpty()) null else source.country,
-            longitude = if (source.longitude.isEmpty()) null else source.longitude,
-            latitude = if (source.latitude.isEmpty()) null else source.latitude,
-            phone = if (source.phone.isEmpty()) null else source.phone,
-            websiteUrl = if (source.websiteUrl.isEmpty()) null else source.websiteUrl
+            street = source.street,
+            city = source.city,
+            state = source.state,
+            country = source.country,
+            longitude = source.longitude,
+            latitude = source.latitude,
+            phone = source.phone,
+            websiteUrl = source.websiteUrl
         )
     }
 }

@@ -1,8 +1,6 @@
 package andrey.dudukov.breweries.utils.logger
 
 import timber.log.Timber
-import java.io.PrintWriter
-import java.io.StringWriter
 
 object Logger {
 

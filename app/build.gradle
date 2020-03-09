@@ -28,7 +28,6 @@ android {
             debuggable true
             minifyEnabled false
             proguardFiles "proguard-rules.pro"
-            buildConfigField "String", "API_URL", "\"​https://api.openbrewerydb.org\""
         }
     }
 

@@ -14,7 +14,7 @@ class DatabaseManagerImpl(context: Context) : DatabaseManager {
     override fun getBreweries() = database.breweriesDao().queryBreweries().map { DbBreweryMapper.from(it) }
 
     override fun findBreweriesByName(query: String) =
-        database.breweriesDao().findBreweriesByName("%$query%").map { DbBreweryMapper.from(it) }
+        database.breweriesDao().findByName("%$query%").map { DbBreweryMapper.from(it) }
 
     override fun saveBreweries(breweries: List<Brewery>) {
         database.breweriesDao().insertAll(breweries.map { BreweryMapper.from(it) })

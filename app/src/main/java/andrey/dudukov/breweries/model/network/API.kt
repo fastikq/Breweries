@@ -1,7 +1,8 @@
 package andrey.dudukov.breweries.model.network
 
 import andrey.dudukov.breweries.model.network.entity.BreweryAPI
-import retrofit2.http.*
+import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface API {
 

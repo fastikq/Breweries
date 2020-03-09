@@ -16,11 +16,11 @@ interface BreweriesDao {
     fun queryBrewery(id: Int): DbBrewery
 
     @Insert(onConflict = REPLACE)
-    fun insertBrewery(dbBrewery: DbBrewery)
+    fun insert(dbBrewery: DbBrewery)
 
     @Insert(onConflict = REPLACE)
     fun insertAll(dbBrewery: List<DbBrewery>)
 
     @Query("SELECT * FROM breweries WHERE name LIKE :query")
-    fun findBreweriesByName(query: String): List<DbBrewery>
+    fun findByName(query: String): List<DbBrewery>
 }
